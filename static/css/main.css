@@ -1,0 +1,287 @@
+/*
+  Control + F these keywords search terms
+  Comments Searchables:
+    START Manship Global Standard CSS
+    START Default Global Declarations
+    START Login CSS
+    START Crew Menu CSS
+    START Screens CSS, This is the Standard CSS for each screens of Crew Menu like Bio
+    START Negator Classes
+    
+  Extra single element classes:
+    .btn-msmi-green
+*/
+
+/* START Default Global Declarations */
+body{
+	color: #2e76b8;
+}
+input, select, textarea{
+	color: #2e76b8 !important;
+	border: 3px solid #2e76b8 !important;
+}
+textarea{
+	resize: none;
+	height: 100px !important;
+}
+button{
+	height: 50px !important;
+	font-size: 18px !important;
+	border-radius: 10px !important;
+	margin-bottom: 5px !important;
+}
+footer{
+	text-align: center;
+}
+footer.default{
+	border-top: 2px solid #2e76b8;
+	margin-top: 25px;
+	line-height: 2.5;
+}
+.notifications-close{
+	font-size: 24px;
+	margin-top: -8px;
+	cursor: pointer;
+}
+.navbar-user-identifier{
+	margin-top: 15px;
+}
+.border-separator{
+	border: 1px solid #2e76b8;
+	margin-top: 10px;
+}
+.error{
+	color: red;
+	font-size: 18px;
+}
+form.ng-dirty .error{
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.notifications{
+	border: 4px solid #ec1c2a;
+	border-radius: 10px;
+	color: #ec1c2a;
+	padding: 5px;
+	font-size: 16px;
+	margin: 0 auto;
+	width: 50%;
+	margin-bottom: 15px;
+}
+/*.ng-touched::after .error{
+	font-weight: 700;
+}*/
+/* END Default Global Declarations */
+
+/* START Login CSS */
+#login-container{
+	/*background-color: #2e76b8;*/
+	/*width: 50%;*/
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#login-notifications{
+	border: 4px solid #ec1c2a;
+	border-radius: 10px;
+	color: #ec1c2a;
+	padding: 20px;
+	font-size: 16px;
+	margin: 0 auto;
+	margin-bottom: 75px;
+	width: 50%;
+	font-weight: 700;
+}
+#login-form{
+	border: 3px solid #2e76b8;
+	border-radius: 10px;
+	width: 350px;
+	padding: 20px;
+}
+#login-form img{
+	margin-bottom: 30px;
+}
+#login-form input{
+	text-align: center;
+	height: 50px;
+	font-size: 18px;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#login-mascot{
+	/*width: 40%;*/
+	height: 400px;
+	/*display: inline;*/
+	margin-left: 40px;
+	border: 4px solid #000;
+}
+#login-mascot-desk{
+	background-color: #6e7b84;
+	border: 1px solid black;
+	height: 5px;
+	margin-top: -35px;
+	margin-bottom: 30px;
+}
+/* END Login CSS */
+
+/* START Crew Menu CSS */
+#crew-menu-container{
+	text-align: center;
+	font-size: 2vw;
+}
+#crew-menu-container button{
+	height: 65px !important;
+	border-radius: 15px !important;
+}
+#crew-menu-body{
+	border-top: 3px solid #2e76b8;
+	border-bottom: 3px solid #2e76b8;
+	padding:25px;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+#crew-menu-body button{
+	border: 3px solid #2e76b8;
+	color: #2e76b8;
+}
+#crew-menu-body button:hover{
+	background-color: #2e76b8;
+	color: #fff;
+}
+#crew-menu-body .form-group{
+	margin-bottom: 10px;
+}
+#crew-menu-footer button{
+	border: 3px solid #02be9b;
+	color: #02be9b;
+}
+#crew-menu-footer button:hover{
+	background-color: #02be9b;
+	color: #fff;
+}
+/* END Crew Menu CSS */
+
+/* START Screens CSS */
+.screens-padding{
+	padding-left: 75px;
+	padding-right: 75px;
+}
+.screens-body{
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	border-top: 2px solid #2e76b8 !important;
+	border-bottom: 2px solid #2e76b8 !important;
+}
+.screens-body input, .screens-body select, .screens-body textarea{
+	border: 2px solid #2e76b8 !important;
+}
+.screens-body .col-lg-2{
+	width: 13%
+}
+.screens-body .col-lg-10{
+	width: 87%
+}
+#crew-menu-footer .screens-footer button{
+	height: auto !important;
+/*	font-size: 12px !important;
+	border-radius: 	5px !important;*/
+}
+#profile-sidebar{
+	width: 100%;
+	padding-top: 25px; 
+	padding-bottom: 25px;
+}
+.profile-picture{
+	border: 2px solid #2e76b8;
+}
+.profile-picture-caption{
+	width: 100%;
+	border-bottom: 2px solid #2e76b8;
+	border-left: 2px solid #2e76b8;
+	border-right: 2px solid #2e76b8;
+}
+.profile-border{
+	border-left: 2px solid #2e76b8;
+}
+/* END Screens CSS */
+
+/* START Manship Global Standard CSS */
+.btn-msmi-green {
+  color: #fff;
+  background-color: #02be9b;
+  border-color: #02be9b;
+}
+.btn-msmi-green:focus,
+.btn-msmi-green.focus {
+  color: #fff;
+  background-color: #02be9b;
+  border-color: #02be9b;
+}
+.btn-msmi-green:hover {
+  color: #fff;
+  background-color: #82ca9c;
+  border-color: #82ca9c;
+}
+.btn-msmi-disabled{
+	color: #ccc !important;
+	border-color: #ccc !important;
+}
+.btn-msmi-disabled:hover{
+	color: none !important;
+	background-color: #fff !important;
+	cursor: default;
+}
+.background-msmi-blue{
+  background-color: #2e76b8 !important;
+  border-bottom: 5px solid #04508e;
+  color: #fff;
+}
+.background-msmi-blue a, .background-msmi-blue li a{
+	color: #fff;
+}
+.color-msmi-blue{
+  color: #2e76b8;
+}
+.color-msmi-green{
+  color: #02be9b !important;
+}
+/* END Manship Global Standard CSS */
+
+/* START overrdden bootstrap classes */
+.navbar-default .navbar-nav>li>a{
+	color: #fff;
+	font-weight: 700;
+}
+@media (min-width: 768px){
+	.navbar-nav>li>a{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+		background-color: #2e76b8;
+	}
+}
+.input-label{
+	color: #2e76b8;
+	background-color: transparent;
+	border: none;
+}
+.input-group{
+	margin-top: 10px;
+}
+.input-form{
+	border-radius: 5px !important;
+}
+.input-group-addon{
+	text-align: left;
+}
+/* END overrdden bootstrap classes 
+
+/* START Negator Classes */
+.negate-margin-bottom{
+	margin-bottom: 0px !important;
+}
+.negate-padding-left{
+	padding-left: 0px;
+}
+/* END Negator Classes */

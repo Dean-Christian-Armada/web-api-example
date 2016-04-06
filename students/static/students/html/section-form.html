@@ -1,0 +1,66 @@
+<div id="crew-menu-header">
+		<strong>Add Section Form</strong> <br />
+		<small style="font-size:14px">(In your browser, inspect element and then check the network, for every CRUD operation a "section/" on the name column(first row on the bottom of network tab) should be added, there you can see the HTTP response(which should be json), headers, previews etc. )</small>
+</div>
+<div class="panel-body">
+	<div class="row login-body-container">
+		<div class="notifications container" ng-show='Notifications'>
+			<h4>Notifications</h4>
+			<ul>
+				<!-- Example of returning key value pairs -->
+				<li ng-repeat="(key,value) in Errors">
+					<span style="text-transform: capitalize">[[ key ]]</span> - [[ value ]]
+				</li>
+				<li ng-repeat="(key,value) in Success">
+					<!-- <div ng-if="key != 'Id'"> -->
+						<span style="text-transform: capitalize">[[ key ]]</span> - [[ value ]] has been added
+					<!-- </div> -->
+				</li>
+				<li ng-repeat="(key,value) in Deleted">
+					<span style="text-transform: capitalize">[[ key ]]</span> - [[ value ]] has been deleted
+				</li>
+				<li ng-repeat="(key,value) in Updated">
+					<span style="text-transform: capitalize">[[ key ]]</span> - [[ value ]] has been updated
+				</li>
+			</ul>
+		</div>
+		<form class="form-horizontal" name="SectionForm" novalidate>
+			<div class="col-lg-6 col-lg-offset-4">
+				<div id="login-form">
+					<div class="form-group">
+						<div class="col-lg-12">
+							<!-- ALWAYS TAKE NOTE -->
+							<!-- name and ng-model must be the same for synchronization binding -->
+							<!-- '-' is not valid and must be replaced with underscore -->
+							<input type="text" class="form-control" name="section_name" ng-model="section_name.name" placeholder="Section Name" required>
+							<span class="error" ng-show="SectionForm.section_name.$error.required">This is a required Field</span>
+						</div>
+					</div>
+					<button type="button" class="btn form-control btn-msmi-green" ng-hide="SectionForm.section_name.$pristine || SectionForm.section_name.$invalid" ng-click="ajax_request(section_name)"><strong>Submit</strong></button>
+					<!-- <input type="submit" ng-disabled="SectionForm.section_name.$pristine || SectionForm.section_name.$invalid"> -->
+				</div>
+			</div>
+		</form>
+		<div class="col-lg-6 col-lg-offset-4">
+			<table class="table table-striped" style="width: 350px; margin-top:15px; font-size: 12px;">
+				<thead>
+					<tr>
+						<th class="text-center">Sections</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in Sections">
+						<td>
+							<span ng-click="ajax_update_button(x)" class="glyphicon glyphicon-pencil" style="cursor: pointer; color: red;"></span>
+							<span ng-click="ajax_delete(x.id)" style="cursor: pointer; color: red;">X</span> 
+							----- 
+							<span ng-if="!x.edit">[[ x.name ]]</span>
+							<!-- <span ng-if="x.edit"><input type="text" ng-model="x.name" ng-blur="ajax_update(x.id, x.name)"></span> -->
+							<span ng-if="x.edit"><input type="text" ng-model="x.name" ng-blur="ajax_update(x)"></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
