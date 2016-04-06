@@ -19,8 +19,11 @@ Steps:
 5.) python manage.py runserver
 
 I suggest you learn more with the basics:
+
 AngularJS - http://www.w3schools.com/angular/
+
 Django - https://docs.djangoproject.com/en/1.9/intro/tutorial01/
+
 Django Rest Framework - http://www.django-rest-framework.org/tutorial/quickstart/
 
 Enjoy!
