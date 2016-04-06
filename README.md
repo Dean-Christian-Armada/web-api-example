@@ -7,10 +7,15 @@ Please excuse my codes as it is not optimized and can even be considered spaghet
 The goal here is a demonstration for those who want to learn web api in its most basic idea and explanation.
 
 Steps:
+
 1.) In your terminal type https://github.com/django/django.git
+
 2.) Activate your virtual environment(not really necessary)
+
 3.) pip install -r requirements.txt
+
 4.) cd/web-api-example
+
 5.) python manage.py runserver
 
 I suggest you learn more with the basics:
