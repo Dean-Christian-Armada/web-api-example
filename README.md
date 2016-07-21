@@ -8,7 +8,7 @@ The goal here is a demonstration for those who want to learn web api in its most
 
 Steps:
 
-1.) In your terminal type https://github.com/django/django.git
+1.) In your terminal type git clone https://github.com/Dean-Christian-Armada/web-api-example.git
 
 2.) Activate your virtual environment(not really necessary)
 
