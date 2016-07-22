@@ -19,7 +19,7 @@ from django.contrib import admin
 # from students import views
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    # url(r'^admin/', include(admin.site.urls)),
     # url(r'^$', views.home, name='home'),
 
     # url(r'^api/sections/$', views.api_section, name='api_section'),
