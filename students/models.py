@@ -10,7 +10,7 @@ class Section(models.Model):
 
 class Student(models.Model):
 	section = models.ForeignKey(Section)
-	first_name = models.CharField(max_length=50, default=None)
-	middle_name = models.CharField(max_length=50, default=None)
-	last_name = models.CharField(max_length=50, default=None)
+	first_name = models.CharField(max_length=50)
+	middle_name = models.CharField(max_length=50)
+	last_name = models.CharField(max_length=50)
 	age = models.SmallIntegerField()

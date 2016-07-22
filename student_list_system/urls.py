@@ -16,14 +16,22 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from students import views
+# from students import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', views.home, name='home'),
+    # url(r'^$', views.home, name='home'),
 
-    url(r'^api/v1/section/$', views.api_section, name='api_section'),
-    url(r'^api/v1/section/(?P<pk>[0-9]+)', views.api_section_detail, name='api_section_detail'),
-    url(r'^api/v1/students/', views.api_students, name='api_students'),
+    # url(r'^api/sections/$', views.api_section, name='api_section'),
+    # url(r'^api/section/(?P<pk>[0-9]+)', views.api_section_detail, name='api_section_detail'),
+    # url(r'^api/students/', views.api_students, name='api_students'),
+    # url(r'^api/section/(?P<pk>[0-9]+)', views.api_students, name='api_students'),
     # url(r'^api/v1/students/profile/', views.api_students_profile, name='api_students_profile'),
+    # Returns the token when a username and password is requested
+    # Source: http://www.django-rest-framework.org/api-guide/authentication/#by-exposing-an-api-endpoint
+    # Example: {"username":"xxx", "password":"xyz"} to http://127.0.0.1:8000/api-token-auth/
+    url(r'^tokens/', include('tokens.urls')),
+    url(r'^students/', include('students.urls')),
+    url(r'^sections/', include('sections.urls')),
+    url(r'^docs/', include('rest_framework_docs.urls')),
 ]

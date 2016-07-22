@@ -25,13 +25,25 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # START django manage.py built apps
     'students',
+    # END django manage.py built apps
+    # START third-party packages app
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_framework_docs', # Documentation of Django Rest Framework
+    'corsheaders',
+    'django_logging',
+    'markdown',
+    # END third-party packages app
     
 )
 
 MIDDLEWARE_CLASSES = (
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django_logging.middleware.DjangoLoggingMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -103,3 +115,39 @@ MEDIA_URL = '/media/'
 
 # COMMENT STATICFIELS_DIRS to run collecstatic
 STATICFILES_DIRS = (STATIC_PATH, )
+
+# START Django Rest Framework settings
+REST_FRAMEWORK = {
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ),
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (
+    #     'rest_framework.authentication.TokenAuthentication',
+    # ),
+    # Disables the Admin UI of the Django Rest Framework
+    # Source: http://stackoverflow.com/questions/11898065/how-to-disable-admin-style-browsable-interface-of-django-rest-framework
+    # 'DEFAULT_RENDERER_CLASSES': (
+    #     'rest_framework.renderers.JSONRenderer',
+    # )
+}
+# END Django Rest Framework settings
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+# START Logging
+DJANGO_LOGGING = {
+    "INFO":
+    {
+        "timestamp":
+        {
+            "request": {
+            # ... request info ...
+            },
+            "response": {
+            # ... response info ...
+            }
+        }
+    },
+    "SQL_LOG" : False,
+}
+# END Logging
