@@ -5,7 +5,8 @@ from rest_framework.authtoken.views import ObtainAuthToken
 # To add description on DRF Docs
 class ObtainAuthToken(ObtainAuthToken):
 	"""
-	An endpoint to get your token using your username and password that should be provided to you in the e-mail.... Example: {"username":"dean", "password":"armada"}
+	An endpoint to get your token using your username and password that should be provided to you in the e-mail, Example: {"username":"dean", "password":"armada"}...
+	TAKE NOTE that this token will serve as your authentication
 	"""
 
 
