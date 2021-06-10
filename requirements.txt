@@ -1,5 +1,5 @@
 coreapi==1.32.0
-Django==1.9.2
+Django==2.2.24
 django-cors-headers==1.1.0
 django-logging-json==1.5.3
 django-rest-swagger==2.0.2
